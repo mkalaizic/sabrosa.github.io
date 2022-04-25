@@ -1,37 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Cabin+Sketch:wght@700&family=Encode+Sans+Semi+Expanded:wght@500&family=Knewave&family=Lilita+One&family=Luckiest+Guy&family=Merriweather+Sans:wght@700&family=Monoton&family=Rampart+One&family=Source+Code+Pro:wght@700&display=swap');
+
 :root {
-  --green: #00ff00;
-  --white: #ffffff;
-  --black: #000000;
+  --fontLight: #ffffff;
+  --fontDark: #dcdcdc;
+  --backgroundLight: rgb(174, 204, 215);
+  --backgroundDark: rgb(41, 45, 47);
+  --btnLight: #393836;
+  --btnDark: #ffffff;
+  --titleColorLight: #ffffff;
+  --titleColorDark: #dcdcdc;
 }
 
 * {
   color: var(--fontColor);
-  font-family: helvetica;
+  font-family: Tahoma;
 }
 body {
-  background: var(--bg);
+  /* background-image: linear-gradient(
+    to bottom,
+    rgb(89, 111, 140),
+    rgb(89, 126, 140)
+  ); */
+  text-align: center;
+  background-color: var(--backgroundColor);
 }
 
-ul {
-  font-family: helvetica;
+.titleWrapper {
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8vh;
 }
 
-li {
-  list-style: circle;
+.title {
+  color: var(--titleColor);
+  font-family: Bangers;
+  font-size: 10vh;
 }
 
-.list {
-  list-style: square;
-}
-
-#msg {
-  font-family: monospace;
+.countdown {
+  color: rgb(235, 227, 227);
+  font-size: 7vh;
+  display: flex;
+  gap: 3vh;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn {
   position: absolute;
-  top: 20px;
-  left: 250px;
+  top: 5vh;
+  right: 7vh;
   height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -41,15 +61,19 @@ li {
 }
 
 .light-theme {
-  --bg: var(--green);
-  --fontColor: var(--black);
-  --btnBg: var(--black);
-  --btnFontColor: var(--white);
+  --bg: var(--backgroundLight);
+  --fontColor: var(--fontLight);
+  --backgroundColor: var(--backgroundLight);
+  --btnBg: var(--btnLight);
+  --btnFontColor: var(--btnDark);
+  --titleColor: var(--titleColorLight);
 }
 
 .dark-theme {
-  --bg: var(--black);
-  --fontColor: var(--green);
-  --btnBg: var(--white);
-  --btnFontColor: var(--black);
+  --bg: var(--backgroundDark);
+  --fontColor: var(--fontDark);
+  --backgroundColor: var(--backgroundDark);
+  --btnBg: var(--btnDark);
+  --btnFontColor: var(--btnLight);
+  --titleColor: var(--titleColorDark);
 }
