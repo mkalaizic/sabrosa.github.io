@@ -26,32 +26,32 @@ body {
 }
 
 .titleWrapper {
-  margin-top: 10vh;
+  margin-top: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.8vh;
+  gap: 10px;
 }
 
 .title {
   color: var(--titleColor);
   font-family: Bangers;
-  font-size: 10vh;
+  font-size: 70px;
 }
 
 .countdown {
   color: rgb(235, 227, 227);
-  font-size: 7vh;
+  font-size: 50px;
   display: flex;
-  gap: 3vh;
+  gap: 10px;
   justify-content: center;
   align-items: center;
 }
 
 .btn {
   position: absolute;
-  top: 5vh;
-  right: 7vh;
+  top: 30px;
+  right: 70px;
   height: 50px;
   width: 50px;
   border-radius: 50%;
