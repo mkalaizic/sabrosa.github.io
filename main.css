@@ -1,59 +1,91 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Cabin+Sketch:wght@700&family=Encode+Sans+Semi+Expanded:wght@500&family=Knewave&family=Lilita+One&family=Luckiest+Guy&family=Merriweather+Sans:wght@700&family=Monoton&family=Rampart+One&family=Source+Code+Pro:wght@700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Cabin+Sketch:wght@700&family=Encode+Sans+Semi+Expanded:wght@500&family=Knewave&family=Lilita+One&family=Luckiest+Guy&family=Merriweather+Sans:wght@700&family=Monoton&family=Rampart+One&family=Roboto:wght@100&family=Source+Code+Pro:wght@700&display=swap');
 :root {
-  --fontLight: #ffffff;
-  --fontDark: #dcdcdc;
-  --backgroundLight: rgb(174, 204, 215);
-  --backgroundDark: rgb(41, 45, 47);
+  --fontLight: rgba(255, 255, 255, 0.627);
+  --fontDark: rgba(255, 255, 255, 0.627);
+  --backgroundLight1: 117, 124, 170;
+  --backgroundLight2: 85, 122, 141;
+  --backgroundDark1: 79, 91, 95;
+  --backgroundDark2: 27, 39, 45;
   --btnLight: #393836;
   --btnDark: #ffffff;
   --titleColorLight: #ffffff;
-  --titleColorDark: #dcdcdc;
+  --titleColorDark: #ffffff;
 }
 
 * {
   color: var(--fontColor);
-  font-family: Tahoma;
+  font-family: Roboto;
 }
 body {
-  /* background-image: linear-gradient(
+  background-image: linear-gradient(
     to bottom,
-    rgb(89, 111, 140),
-    rgb(89, 126, 140)
-  ); */
+    rgba(var(--backgroundColor1)),
+    rgba(var(--backgroundColor2))
+  );
+  height: 100vh;
   text-align: center;
   background-color: var(--backgroundColor);
+  color: var(--fontColor);
 }
 
 .titleWrapper {
-  margin-top: 40px;
+  margin-top: 4em;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 0.7em;
 }
 
 .title {
   color: var(--titleColor);
   font-family: Bangers;
-  font-size: 70px;
+  font-size: 3.5em;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 1em;
+  --spacing: 1.25rem;
 }
 
 .countdown {
-  color: rgb(235, 227, 227);
-  font-size: 50px;
+  margin-top: 5em;
+  color: var(--titleColor);
   display: flex;
-  gap: 10px;
+  gap: 1.5em;
   justify-content: center;
   align-items: center;
+  text-align: left;
+}
+
+.vertical-line {
+  width: 0.01em;
+  min-height: 5em;
+  background: var(--fontColor);
+}
+
+.countdown-elements {
+  display: flex;
+  flex-direction: column;
+}
+
+.countdown-numbers {
+  font-size: 4em;
+  text-align: left;
+}
+
+.countdown-letters {
+  font-size: 1em;
+  margin-left: 0.5em;
 }
 
 .btn {
   position: absolute;
-  top: 30px;
-  right: 70px;
-  height: 50px;
-  width: 50px;
+  top: 3em;
+  right: 5em;
+  height: 3em;
+  width: 3em;
   border-radius: 50%;
   border: none;
   color: var(--btnFontColor);
@@ -63,7 +95,8 @@ body {
 .light-theme {
   --bg: var(--backgroundLight);
   --fontColor: var(--fontLight);
-  --backgroundColor: var(--backgroundLight);
+  --backgroundColor1: var(--backgroundLight1);
+  --backgroundColor2: var(--backgroundLight2);
   --btnBg: var(--btnLight);
   --btnFontColor: var(--btnDark);
   --titleColor: var(--titleColorLight);
@@ -72,7 +105,8 @@ body {
 .dark-theme {
   --bg: var(--backgroundDark);
   --fontColor: var(--fontDark);
-  --backgroundColor: var(--backgroundDark);
+  --backgroundColor1: var(--backgroundDark1);
+  --backgroundColor2: var(--backgroundDark2);
   --btnBg: var(--btnDark);
   --btnFontColor: var(--btnLight);
   --titleColor: var(--titleColorDark);
