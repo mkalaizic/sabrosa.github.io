@@ -6,9 +6,16 @@ var myfunc = setInterval(function () {
   var timeleft = countDownDate - now;
 
   // Calculating the days, hours, minutes and seconds left
-  var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+  var days = Math.floor(timeleft / (1000 * 60 * 60 * 24)).toLocaleString(
+    'en-US',
+    { minimumIntegerDigits: 2, useGrouping: false }
+  );
+  var hours = Math.floor(
+    (timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  ).toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false });
+  var minutes = Math.floor(
+    (timeleft % (1000 * 60 * 60)) / (1000 * 60)
+  ).toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false });
   var seconds = Math.floor((timeleft % (1000 * 60)) / 1000).toLocaleString(
     'en-US',
     { minimumIntegerDigits: 2, useGrouping: false }
@@ -21,24 +28,24 @@ var myfunc = setInterval(function () {
   document.getElementById('secs').innerHTML = seconds;
 
   // Display the message when countdown is over
-  if (timeleft < 0) {
-    clearInterval(myfunc);
-    document.getElementById('days').innerHTML = '';
-    document.getElementById('hours').innerHTML = '';
-    document.getElementById('mins').innerHTML = '';
-    document.getElementById('secs').innerHTML = '';
-    document.getElementById('end').innerHTML = 'TIME UP!!';
-  }
+  // if (timeleft < 0) {
+  //   clearInterval(myfunc);
+  //   document.getElementById('days').innerHTML = '';
+  //   document.getElementById('hours').innerHTML = '';
+  //   document.getElementById('mins').innerHTML = '';
+  //   document.getElementById('secs').innerHTML = '';
+  // document.getElementById('end').innerHTML = 'TIME UP!!';
+  // }
 }, 1000);
 const switcher = document.querySelector('.btn');
 
 switcher.addEventListener('click', function () {
-  document.body.classList.toggle('dark-theme');
+  document.body.classList.toggle('light-theme');
 
   var className = document.body.className;
-  if (className == 'light-theme') {
-    this.textContent = 'Dark';
-  } else {
+  if (className == 'dark-theme') {
     this.textContent = 'Light';
+  } else {
+    this.textContent = 'Dark';
   }
 });

@@ -1,23 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Cabin+Sketch:wght@700&family=Encode+Sans+Semi+Expanded:wght@500&family=Knewave&family=Lilita+One&family=Luckiest+Guy&family=Merriweather+Sans:wght@700&family=Monoton&family=Rampart+One&family=Source+Code+Pro:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Cabin+Sketch:wght@700&family=Encode+Sans+Semi+Expanded:wght@500&family=Knewave&family=Lilita+One&family=Luckiest+Guy&family=Merriweather+Sans:wght@700&family=Monoton&family=Rampart+One&family=Roboto:wght@100&family=Source+Code+Pro:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Cabin+Sketch:wght@700&family=Encode+Sans+Semi+Expanded:wght@500&family=Knewave&family=Lilita+One&family=Luckiest+Guy&family=Merriweather+Sans:wght@700&family=Monoton&family=Poppins:wght@500;700&family=Raleway:wght@100;400&family=Rampart+One&family=Roboto+Mono:wght@300&family=Roboto:wght@100&family=Source+Code+Pro:wght@700&family=Ubuntu+Mono:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Cabin+Sketch:wght@700&family=Encode+Sans+Semi+Expanded:wght@500&family=Fira+Sans:wght@400;500;700&family=Knewave&family=Lilita+One&family=Luckiest+Guy&family=Merriweather+Sans:wght@700&family=Monoton&family=Poppins:wght@500;700&family=Raleway:wght@100;400&family=Rampart+One&family=Roboto+Mono:wght@300&family=Roboto:wght@100&family=Source+Code+Pro:wght@700&family=Ubuntu+Mono:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Cabin+Sketch:wght@700&family=Encode+Sans+Semi+Expanded:wght@500&family=Fira+Sans&family=Knewave&family=Lilita+One&family=Luckiest+Guy&family=Merriweather+Sans:wght@700&family=Monoton&family=Poppins:wght@500;700&family=Raleway:wght@100;400&family=Rampart+One&family=Roboto+Mono:wght@300&family=Roboto:wght@100&family=Source+Code+Pro:wght@700&family=Ubuntu+Mono:wght@700&display=swap');
+
 :root {
-  --fontLight: rgba(255, 255, 255, 0.627);
-  --fontDark: rgba(255, 255, 255, 0.627);
+  --fontLight: #ffffffdb;
+  --fontDark: #ffffff;
   --backgroundLight1: 117, 124, 170;
   --backgroundLight2: 85, 122, 141;
   --backgroundDark1: 79, 91, 95;
   --backgroundDark2: 27, 39, 45;
   --btnLight: #393836;
   --btnDark: #ffffff;
-  --titleColorLight: #ffffffdb;
-  --titleColorDark: #ffffff;
+  /* --titleColorLight: #ffffffdb;
+  --titleColorDark: #ffffff; */
 }
 
 * {
   color: var(--fontColor);
-  font-family: Roboto;
+  font-family: Fira sans;
 }
 body {
   background-image: linear-gradient(
@@ -25,61 +24,47 @@ body {
     rgba(var(--backgroundColor1)),
     rgba(var(--backgroundColor2))
   );
+  padding: 10%;
   height: 100vh;
-  background-color: var(--backgroundColor);
-  color: var(--fontColor);
-  max-width: max-content;
-  margin: auto;
 }
 .corazon {
-  margin-top: 3em;
+  margin-top: 1vh;
 }
+
 .title {
-  color: var(--titleColor);
-  font-family: Fira sans;
-  font-size: 3.5em;
-  line-height: 1.25;
+  font-size: 2.5em;
 }
 
 .text-wrapper {
-  font-size: 1em;
-
-  margin-top: 2em;
-  width: 30em;
+  font-size: 0.9em;
+  margin-top: 2vh;
 }
 
 .countdown {
-  margin-top: 3em;
-  color: var(--titleColor);
+  margin-top: 5vh;
   display: flex;
-  gap: 1.5em;
-
-  align-items: center;
-  text-align: left;
-}
-
-.vertical-line {
-  width: 0.01em;
-  min-height: 7em;
-  background: var(--titleColor);
+  gap: 2vh;
+  align-content: left-start;
 }
 
 .countdown-elements {
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
+  gap: 0.5vh;
 }
 
 .countdown-numbers {
-  font-size: 3.5em;
-  text-align: left;
+  font-size: 3em;
   font-weight: bolder;
-  font-family: Roboto Mono;
+}
+
+.vertical-line {
+  background-color: var(--titleColor);
+  width: 0.01em;
 }
 
 .countdown-letters {
   font-size: 0.7em;
-  margin-left: 0.2em;
   text-transform: uppercase;
 }
 
@@ -87,22 +72,17 @@ body {
   position: absolute;
   top: 5%;
   right: 5%;
-  height: 3em;
-  width: 3em;
+  height: 7vh;
+  width: 7vh;
   border-radius: 50%;
   border: none;
   color: var(--btnFontColor);
   background-color: var(--btnBg);
+  cursor: pointer;
 }
 
-.light-theme {
-  --bg: var(--backgroundLight);
-  --fontColor: var(--fontLight);
-  --backgroundColor1: var(--backgroundLight1);
-  --backgroundColor2: var(--backgroundLight2);
-  --btnBg: var(--btnLight);
-  --btnFontColor: var(--btnDark);
-  --titleColor: var(--titleColorLight);
+.btn:focus {
+  outline-style: none;
 }
 
 .dark-theme {
@@ -113,4 +93,14 @@ body {
   --btnBg: var(--btnDark);
   --btnFontColor: var(--btnLight);
   --titleColor: var(--titleColorDark);
+}
+
+.light-theme {
+  --bg: var(--backgroundLight);
+  --fontColor: var(--fontLight);
+  --backgroundColor1: var(--backgroundLight1);
+  --backgroundColor2: var(--backgroundLight2);
+  --btnBg: var(--btnLight);
+  --btnFontColor: var(--btnDark);
+  --titleColor: var(--titleColorLight);
 }
