@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Cabin+Sketch:wght@700&family=Encode+Sans+Semi+Expanded:wght@500&family=Knewave&family=Lilita+One&family=Luckiest+Guy&family=Merriweather+Sans:wght@700&family=Monoton&family=Rampart+One&family=Source+Code+Pro:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Cabin+Sketch:wght@700&family=Encode+Sans+Semi+Expanded:wght@500&family=Knewave&family=Lilita+One&family=Luckiest+Guy&family=Merriweather+Sans:wght@700&family=Monoton&family=Rampart+One&family=Roboto:wght@100&family=Source+Code+Pro:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Cabin+Sketch:wght@700&family=Encode+Sans+Semi+Expanded:wght@500&family=Knewave&family=Lilita+One&family=Luckiest+Guy&family=Merriweather+Sans:wght@700&family=Monoton&family=Poppins:wght@500;700&family=Raleway:wght@100;400&family=Rampart+One&family=Roboto+Mono:wght@300&family=Roboto:wght@100&family=Source+Code+Pro:wght@700&family=Ubuntu+Mono:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Cabin+Sketch:wght@700&family=Encode+Sans+Semi+Expanded:wght@500&family=Fira+Sans&family=Knewave&family=Lilita+One&family=Luckiest+Guy&family=Merriweather+Sans:wght@700&family=Monoton&family=Poppins:wght@500;700&family=Raleway:wght@100;400&family=Rampart+One&family=Roboto+Mono:wght@300&family=Roboto:wght@100&family=Source+Code+Pro:wght@700&family=Ubuntu+Mono:wght@700&display=swap');
 :root {
   --fontLight: rgba(255, 255, 255, 0.627);
   --fontDark: rgba(255, 255, 255, 0.627);
@@ -9,7 +11,7 @@
   --backgroundDark2: 27, 39, 45;
   --btnLight: #393836;
   --btnDark: #ffffff;
-  --titleColorLight: #ffffff;
+  --titleColorLight: #ffffffdb;
   --titleColorDark: #ffffff;
 }
 
@@ -24,66 +26,67 @@ body {
     rgba(var(--backgroundColor2))
   );
   height: 100vh;
-  text-align: center;
   background-color: var(--backgroundColor);
   color: var(--fontColor);
+  max-width: max-content;
+  margin: auto;
 }
-
-.titleWrapper {
-  margin-top: 4em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.7em;
+.corazon {
+  margin-top: 3em;
 }
-
 .title {
   color: var(--titleColor);
-  font-family: Bangers;
+  font-family: Fira sans;
   font-size: 3.5em;
   line-height: 1.25;
 }
 
-h3 {
+.text-wrapper {
   font-size: 1em;
-  --spacing: 1.25rem;
+
+  margin-top: 2em;
+  width: 30em;
 }
 
 .countdown {
-  margin-top: 5em;
+  margin-top: 3em;
   color: var(--titleColor);
   display: flex;
   gap: 1.5em;
-  justify-content: center;
+
   align-items: center;
   text-align: left;
 }
 
 .vertical-line {
   width: 0.01em;
-  min-height: 5em;
-  background: var(--fontColor);
+  min-height: 7em;
+  background: var(--titleColor);
 }
 
 .countdown-elements {
   display: flex;
   flex-direction: column;
+  gap: 0.5em;
 }
 
 .countdown-numbers {
-  font-size: 4em;
+  font-size: 3.5em;
   text-align: left;
+  font-weight: bolder;
+  font-family: Roboto Mono;
 }
 
 .countdown-letters {
-  font-size: 1em;
-  margin-left: 0.5em;
+  font-size: 0.7em;
+  margin-left: 0.2em;
+  text-transform: uppercase;
 }
 
 .btn {
   position: absolute;
-  top: 3em;
-  right: 5em;
+  top: 5%;
+  right: 5%;
   height: 3em;
   width: 3em;
   border-radius: 50%;
