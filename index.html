@@ -6,47 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sabrosa</title>
     <link rel="stylesheet" href="main.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-C2CGXME6WH"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-C2CGXME6WH');
+    </script>
   </head>
   <body class="dark-theme">
-    <img class="corazon" src="giphy (1).gif" height="80em" width="80em" />
-    <h1 class="title" id="title">La Sabrosa #2</h1>
+    <div class="wrapper">
+      <span id="corazon"
+        ><img class="corazon" src="giphy (1).gif" height="80em" width="80em"
+      /></span>
+      <h1 class="title" id="title">La Sabrosa</h1>
 
-    <div class="text-wrapper">
-      <p id="msg">May 20th @ Bushwick secret location from 12am to 4am.</p>
-      <p id="msg">
-        Early bird still available at $15. To buy your ticket please send a
-        Venmo to <u>@fernet</u>.
-      </p>
+      <div class="text-wrapper">
+        <p id="msg">May 20th @ Bushwick secret location from 12am to 4am.</p>
+        <p id="msg">
+          Early bird still available at $15. To buy your ticket please send a
+          Venmo to <u>@fernet</u>.
+        </p>
 
-      <p id="msg">
-        <strong>Important</strong> include your full Name + Email on Venmo
-        comment to receive your QR ticket.
-      </p>
-    </div>
-    <div class="countdown">
-      <div class="countdown-elements">
-        <span class="countdown-numbers" id="days"></span>
-        <span class="countdown-letters">days</span>
+        <p id="msg">
+          <i>
+            <strong>Important</strong> include your full Name + Email on Venmo
+            comment to receive your QR ticket.</i
+          >
+        </p>
       </div>
-      <div class="vertical-line"></div>
-      <div class="countdown-elements">
-        <span class="countdown-numbers" id="hours"></span>
-        <span class="countdown-letters">hrs</span>
+      <div class="countdown">
+        <div class="countdown-elements">
+          <span class="countdown-numbers" id="days"></span>
+          <span class="countdown-letters">days</span>
+        </div>
+        <div class="vertical-line"></div>
+        <div class="countdown-elements">
+          <span class="countdown-numbers" id="hours"></span>
+          <span class="countdown-letters">hrs</span>
+        </div>
+        <div class="vertical-line"></div>
+        <div class="countdown-elements">
+          <span class="countdown-numbers" id="mins"></span>
+          <span class="countdown-letters">mins</span>
+        </div>
+        <div class="vertical-line"></div>
+        <div class="countdown-elements">
+          <span class="countdown-numbers" id="secs"></span>
+          <span class="countdown-letters">secs</span>
+        </div>
+        <!-- <h2 id="end"></h2> -->
       </div>
-      <div class="vertical-line"></div>
-      <div class="countdown-elements">
-        <span class="countdown-numbers" id="mins"></span>
-        <span class="countdown-letters">mins</span>
-      </div>
-      <div class="vertical-line"></div>
-      <div class="countdown-elements">
-        <span class="countdown-numbers" id="secs"></span>
-        <span class="countdown-letters">secs</span>
-      </div>
-      <!-- <h2 id="end"></h2> -->
-    </div>
-    <div>
-      <button class="btn">Dark</button>
     </div>
     <script src="app.js"></script>
     <noscript>You need to enable JavaScript to view the full site.</noscript>

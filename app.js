@@ -37,15 +37,15 @@ var myfunc = setInterval(function () {
   // document.getElementById('end').innerHTML = 'TIME UP!!';
   // }
 }, 1000);
-const switcher = document.querySelector('.btn');
+const switcher = document.getElementById('corazon');
 
 switcher.addEventListener('click', function () {
   document.body.classList.toggle('light-theme');
 
-  var className = document.body.className;
-  if (className == 'dark-theme') {
-    this.textContent = 'Light';
-  } else {
-    this.textContent = 'Dark';
-  }
+  // var className = document.body.className;
+  // if (className == 'dark-theme') {
+  //   this.textContent = 'Light';
+  // } else {
+  //   this.textContent = 'Dark';
+  // }
 });
