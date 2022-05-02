@@ -4,42 +4,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Cabin+Sketch:wght@700&family=Encode+Sans+Semi+Expanded:wght@500&family=Fira+Sans:wght@400;500;900&family=Knewave&family=Lilita+One&family=Luckiest+Guy&family=Merriweather+Sans:wght@700&family=Monoton&family=Poppins:wght@500;700&family=Raleway:wght@100;400&family=Rampart+One&family=Roboto+Mono:wght@300&family=Roboto:wght@100&family=Source+Code+Pro:wght@700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Ubuntu+Mono:wght@700&display=swap');
 
 :root {
-  --fontLight: #ffffffdb;
-  --fontDark: #ffffff;
+  --fontLight: rgba(255, 255, 255, 0.627);
+  --fontDark: rgba(255, 255, 255, 0.627);
   --backgroundLight1: 117, 124, 170;
   --backgroundLight2: 85, 122, 141;
   --backgroundDark1: 79, 91, 95;
   --backgroundDark2: 27, 39, 45;
   --btnLight: #393836;
   --btnDark: #ffffff;
-  /* --titleColorLight: #ffffffdb;
-  --titleColorDark: #ffffff; */
+  --titleColorLight: #ffffff;
+  --titleColorDark: #ffffff;
 }
 
 * {
   color: var(--fontColor);
   font-family: Source Sans Pro;
 }
+
 body {
   background-image: linear-gradient(
     to bottom,
     rgba(var(--backgroundColor1)),
     rgba(var(--backgroundColor2))
   );
-  padding: 5%;
-  height: 100vh;
   text-align: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 1%;
+  max-width: auto;
+  max-height: auto;
 }
+
 .wrapper {
   display: inline-block;
   text-align: left;
+  width: 80%;
+}
+
+.corazon {
+  margin-top: 10vh;
+  cursor: pointer;
 }
 
 .title {
-  font-size: 3.5em;
+  margin-top: 2vh;
+  font-size: 3em;
   font-weight: bold;
   font-family: Source Sans Pro;
   font-weight: 400;
+  letter-spacing: -0.2rem;
+  color: var(--titleColor);
 }
 
 .text-wrapper {
@@ -47,58 +62,48 @@ body {
 }
 
 .countdown {
+  display: grid;
+  grid-template-columns: repeat(4, 12vh);
   margin-top: 5vh;
-  display: flex;
-  gap: 2vh;
-  justify-content: left-start;
+  margin-left: -3vh;
 }
 
 .countdown-elements {
   display: flex;
   flex-direction: column;
-  gap: 0.5vh;
+  border-right: 0.5px solid var(--fontColor);
+  text-align: center;
+  gap: 1vh;
+}
+
+.countdown-secs {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1vh;
 }
 
 .countdown-numbers {
   font-size: 3em;
-  font-weight: bolder;
-}
-
-.vertical-line {
-  background-color: var(--titleColor);
-  width: 0.01em;
+  font-weight: bold;
+  font-family: Source Sans Pro;
+  font-weight: 400;
+  letter-spacing: -0.175rem;
+  color: var(--titleColor);
 }
 
 .countdown-letters {
-  font-size: 0.7em;
+  font-size: 0.75em;
   text-transform: uppercase;
+  letter-spacing: 0.5em;
 }
 
-.btn {
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  height: 7vh;
-  width: 7vh;
-  border-radius: 50%;
-  border: none;
-  color: var(--btnFontColor);
-  background-color: var(--btnBg);
+.icons {
+  fill: var(--titleColor);
+  text-align: left;
   cursor: pointer;
-}
-
-.btn:focus {
-  outline-style: none;
-}
-
-.dark-theme {
-  --bg: var(--backgroundDark);
-  --fontColor: var(--fontDark);
-  --backgroundColor1: var(--backgroundDark1);
-  --backgroundColor2: var(--backgroundDark2);
-  --btnBg: var(--btnDark);
-  --btnFontColor: var(--btnLight);
-  --titleColor: var(--titleColorDark);
+  display: flex;
+  gap: 2vh;
 }
 
 .light-theme {
@@ -109,4 +114,14 @@ body {
   --btnBg: var(--btnLight);
   --btnFontColor: var(--btnDark);
   --titleColor: var(--titleColorLight);
+}
+
+.dark-theme {
+  --bg: var(--backgroundDark);
+  --fontColor: var(--fontDark);
+  --backgroundColor1: var(--backgroundDark1);
+  --backgroundColor2: var(--backgroundDark2);
+  --btnBg: var(--btnDark);
+  --btnFontColor: var(--btnLight);
+  --titleColor: var(--titleColorDark);
 }
