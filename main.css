@@ -31,15 +31,16 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin: 0;
-  padding: 1.5em 7% 0 7%;
+  padding: 3em 8% 0 8%;
   max-width: auto;
   max-height: auto;
-  font-size: 3vh;
+  font-size: 20px;
 }
 
 .wrapper {
   display: inline-block;
   text-align: left;
+  vertical-align: center;
 }
 
 .corazon {
@@ -67,29 +68,23 @@ body {
   }
 }
 
+.vertical-lign {
+  width: 0.01em;
+  background-color: var(--fontColor);
+}
 .countdown {
-  display: grid;
-  grid-template-columns: repeat(4, 25%);
+  display: flex;
   margin-top: 5vh;
-  max-width: 60vh;
+  max-width: 20em;
+  gap: 0.7em;
 }
 
 .countdown-elements {
   display: flex;
   flex-direction: column;
-  border-right: 0.01em solid var(--fontColor);
   text-align: left;
   gap: 1vh;
-  margin-right: 3vh;
   height: 5.5em;
-}
-
-.countdown-secs {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  gap: 1vh;
-  margin-right: 3vh;
 }
 
 .countdown-numbers {
