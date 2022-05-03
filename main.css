@@ -31,19 +31,18 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin: 0;
-  padding: 1%;
+  padding: 1.5em 7% 0 7%;
   max-width: auto;
   max-height: auto;
+  font-size: 3vh;
 }
 
 .wrapper {
   display: inline-block;
   text-align: left;
-  width: 80%;
 }
 
 .corazon {
-  margin-top: 10vh;
   cursor: pointer;
 }
 
@@ -59,28 +58,38 @@ body {
 
 .text-wrapper {
   font-size: 1em;
+  width: 80%;
+}
+
+@media only screen and (max-width: 600px) {
+  .text-wrapper {
+    width: 100%;
+  }
 }
 
 .countdown {
   display: grid;
-  grid-template-columns: repeat(4, 12vh);
+  grid-template-columns: repeat(4, 25%);
   margin-top: 5vh;
-  margin-left: -3vh;
+  max-width: 60vh;
 }
 
 .countdown-elements {
   display: flex;
   flex-direction: column;
-  border-right: 0.5px solid var(--fontColor);
-  text-align: center;
+  border-right: 0.01em solid var(--fontColor);
+  text-align: left;
   gap: 1vh;
+  margin-right: 3vh;
+  height: 5.5em;
 }
 
 .countdown-secs {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
   gap: 1vh;
+  margin-right: 3vh;
 }
 
 .countdown-numbers {
@@ -88,22 +97,23 @@ body {
   font-weight: bold;
   font-family: Source Sans Pro;
   font-weight: 400;
-  letter-spacing: -0.175rem;
+  letter-spacing: 0.2rem;
   color: var(--titleColor);
 }
 
 .countdown-letters {
-  font-size: 0.75em;
+  font-size: 0.6em;
   text-transform: uppercase;
   letter-spacing: 0.5em;
 }
 
 .icons {
+  margin-top: -2em;
   fill: var(--titleColor);
   text-align: left;
   cursor: pointer;
   display: flex;
-  gap: 2vh;
+  gap: 3vh;
 }
 
 .light-theme {
