@@ -31,7 +31,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin: 0;
-  padding: 3em 2em 0 2em;
+  padding: 2em 1em 0 2em;
   max-width: auto;
   max-height: auto;
 }
@@ -63,7 +63,7 @@ body {
 
 @media only screen and (max-width: 600px) {
   .text-wrapper {
-    width: 100%;
+    width: 90%;
   }
 }
 
@@ -98,7 +98,7 @@ body {
 .countdown-letters {
   font-size: 0.8em;
   text-transform: uppercase;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.4em;
 }
 
 .icons {
