@@ -61,11 +61,11 @@ body {
   width: 80%;
 }
 
-/* @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   .text-wrapper {
     width: 100%;
   }
-} */
+}
 
 .vertical-lign {
   width: 0.01em;
@@ -91,7 +91,7 @@ body {
   font-weight: bold;
   font-family: Source Sans Pro;
   font-weight: 400;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1em;
   color: var(--titleColor);
 }
 
