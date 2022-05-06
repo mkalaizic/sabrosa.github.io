@@ -74,6 +74,7 @@ body {
 .countdown {
   display: flex;
   margin-top: 5vh;
+  max-width: 25em;
   gap: 0.5em;
 }
 
